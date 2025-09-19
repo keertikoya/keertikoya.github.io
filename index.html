@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Keerti Koya - Portfolio</title>
+    <title>Keerti Koya - Website</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
 
+    <!-- Hero Section -->
     <header class="hero-section">
         <div class="hero-content">
             <h1>>> Keerti Koya</h1>
-            <p class="tagline">Innovating at the intersection of technology and business.</p>
+            <p class="tagline" id="typing-text"></p>
         </div>
         <div class="scroll-indicator">
             <i class="fas fa-chevron-down"></i>
@@ -22,57 +22,348 @@
 
     <main>
 
+        <!-- Technical Projects Section -->
         <section id="projects" class="section">
             <div class="section-header">
                 <h2>Technical Projects</h2>
             </div>
             <div class="content-grid">
-                <a href="https://github.com/KeertiKoya/your-project" class="card" target="_blank">
+                <!-- Project 1: Medication Tracker -->
+                <a href="https://github.com/keertikoya/MedicationTracker" class="card" target="_blank">
                     <div class="card-inner">
-                        <h3>Project Title 1</h3>
-                        <p>A brief, powerful description of your project. Highlight the problem, your solution, and the technologies used. Link to a detailed README on GitHub.</p>
-                        <span class="card-link-text">View on GitHub <i class="fas fa-arrow-right"></i></span>
+                        <h3>Medication Tracker</h3>
+                        <p>Built a full-stack web application for medication management using Python (Flask), SQLite, HTML/CSS, and JavaScript. The app includes real-time search, automated expiration alerts, and a responsive UI.</p>
+                        <div class="tech-badges">
+                            <span class="badge-container">
+                                <i class="fab fa-python badge"></i>
+                                <span class="badge-tooltip">Python</span>
+                            </span>
+                            <span class="badge-container">
+                                <i class="fas fa-database badge"></i>
+                                <span class="badge-tooltip">SQLite</span>
+                            </span>
+                            <span class="badge-container">
+                                <i class="fab fa-js-square badge"></i>
+                                <span class="badge-tooltip">JavaScript</span>
+                            </span>
+                        </div>
+                        <div class="card-buttons">
+                            <span class="btn btn-secondary">View on GitHub</span>
+                        </div>
                     </div>
                 </a>
-                <a href="https://github.com/KeertiKoya/your-other-project" class="card" target="_blank">
+                <!-- Project 2: Heart-in-a-Box Model -->
+                <a href="#" class="card" target="_blank">
                     <div class="card-inner">
-                        <h3>Project Title 2</h3>
-                        <p>Describe your second project. Focus on what makes it unique and its impact.</p>
-                        <span class="card-link-text">View on GitHub <i class="fas fa-arrow-right"></i></span>
+                        <h3>Heart-in-a-Box Model</h3>
+                        <p>Developed a modular perfusion system using embedded sensors, Arduino microcontrollers, and Python-based monitoring to simulate ex vivo heart conditions. Innovated a visual warning system that provided a 20-second power failure alert.</p>
+                        <div class="tech-badges">
+                            <span class="badge-container">
+                                <i class="fab fa-python badge"></i>
+                                <span class="badge-tooltip">Python</span>
+                            </span>
+                            <span class="badge-container">
+                                <i class="fas fa-microchip badge"></i>
+                                <span class="badge-tooltip">Arduino</span>
+                            </span>
+                            <span class="badge-container">
+                                <i class="fas fa-plug badge"></i>
+                                <span class="badge-tooltip">Embedded Systems</span>
+                            </span>
+                        </div>
+                        <div class="card-buttons">
+                            <span class="btn btn-secondary">View Details</span>
+                        </div>
                     </div>
                 </a>
-                </div>
+                <!-- Project 3: Asthma Warrior -->
+                <a href="#" class="card" target="_blank">
+                    <div class="card-inner">
+                        <h3>Asthma Warrior</h3>
+                        <p>Programmed an Android IoT application integrating sensor data and real-time APIs to detect personalized asthma triggers and deliver predictive alerts. Engineered scalable data pipelines to process continuous environmental signals.</p>
+                        <div class="tech-badges">
+                            <span class="badge-container">
+                                <i class="fab fa-android badge"></i>
+                                <span class="badge-tooltip">Android</span>
+                            </span>
+                            <span class="badge-container">
+                                <i class="fas fa-cloud badge"></i>
+                                <span class="badge-tooltip">IoT</span>
+                            </span>
+                            <span class="badge-container">
+                                <i class="fas fa-wifi badge"></i>
+                                <span class="badge-tooltip">APIs</span>
+                            </span>
+                        </div>
+                        <div class="card-buttons">
+                            <span class="btn btn-secondary">View Details</span>
+                        </div>
+                    </div>
+                </a>
+                <!-- Project 3: Carpal Tunnel Syndrome Prevention -->
+                <a href="#" class="card" target="_blank">
+                    <div class="card-inner">
+                        <h3>Carpal Tunnel Syndrome Prevention</h3>
+                        <p>A prophylactic device that helps prevent the appearance and/or progression of Carpal Tunnel Syndrome by continuous monitoring.</p>
+                        <div class="tech-badges">
+                            <span class="badge-container">
+                                <i class="fas fa-hand-paper badge"></i>
+                                <span class="badge-tooltip">Biometrics</span>
+                            </span>
+                            <span class="badge-container">
+                                <i class="fas fa-microchip badge"></i>
+                                <span class="badge-tooltip">Microcontroller</span>
+                            </span>
+                        </div>
+                        <div class="card-buttons">
+                            <span class="btn btn-secondary">View Details</span>
+                        </div>
+                    </div>
+                </a>
+                <!-- Project 4: COSA (Comics for Social Anxiety) -->
+                <a href="#" class="card" target="_blank">
+                    <div class="card-inner">
+                        <h3>COSA (Comics for Social Anxiety)</h3>
+                        <p>An Android app to help kids with autism handle social photos through games, fidgeting, and simulating real-life social scenarios.</p>
+                        <div class="tech-badges">
+                            <span class="badge-container">
+                                <i class="fab fa-android badge"></i>
+                                <span class="badge-tooltip">Android</span>
+                            </span>
+                            <span class="badge-container">
+                                <i class="fas fa-brain badge"></i>
+                                <span class="badge-tooltip">Cognitive Science</span>
+                            </span>
+                            <span class="badge-container">
+                                <i class="fas fa-pencil-ruler badge"></i>
+                                <span class="badge-tooltip">UI/UX Design</span>
+                            </span>
+                        </div>
+                        <div class="card-buttons">
+                            <span class="btn btn-secondary">View Details</span>
+                        </div>
+                    </div>
+                </a>
+                <!-- Project 5: Taskmate -->
+                <a href="#" class="card" target="_blank">
+                    <div class="card-inner">
+                        <h3>Taskmate</h3>
+                        <p>An Android app helping students stay organized and complete their assignments on time, to reduce stress. Taskmate automatically creates an efficient schedule, with breaks, to help the user with time management.</p>
+                        <div class="tech-badges">
+                            <span class="badge-container">
+                                <i class="fab fa-android badge"></i>
+                                <span class="badge-tooltip">Android</span>
+                            </span>
+                            <span class="badge-container">
+                                <i class="fas fa-clock badge"></i>
+                                <span class="badge-tooltip">Time Management</span>
+                            </span>
+                        </div>
+                        <div class="card-buttons">
+                            <span class="btn btn-secondary">View Details</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
         </section>
 
+        <!-- Business Reports -->
         <section id="reports" class="section">
             <div class="section-header">
-                <h2>Business Reports & Publications</h2>
+                <h2>Business Reports</h2>
             </div>
             <div class="content-list">
-                <a href="path/to/your/report1.pdf" class="list-item" target="_blank">
-                    <h3>Report Title 1</h3>
-                    <p>A short summary of the report, including its purpose and key findings.</p>
-                </a>
-                <a href="path/to/your/report2.pdf" class="list-item" target="_blank">
-                    <h3>Report Title 2</h3>
-                    <p>Brief summary of your second publication or report.</p>
-                </a>
+                <!-- Report 1: Asthma Warrior -->
+                <div class="list-item">
+                    <div class="list-item-header">
+                        <i class="fas fa-file-alt list-item-icon"></i>
+                        <h3>Asthma Warrior</h3>
+                        <i class="fas fa-chevron-down accordion-icon"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <p>A business plan created for an Android app, Asthma Warrior. The app is committed to transforming asthma management with a smart inhaler device. By integrating cutting-edge sensor technology and a user-friendly mobile app, the device allows asthma patients to predict and prevent asthma attacks based on their specific triggers.</p>
+                        <div class="report-links">
+                            <a href="#" class="report-link" target="_blank">View Report <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
                 </div>
+                <!-- Report 2: ShopSmall -->
+                <div class="list-item">
+                    <div class="list-item-header">
+                        <i class="fas fa-file-alt list-item-icon"></i>
+                        <h3>ShopSmall</h3>
+                        <i class="fas fa-chevron-down accordion-icon"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <p>A business plan created for an entrepreneurship idea involving the creation of a mobile app. Shop Small aims to give small businesses a chance to compete with larger corporations by allowing local communities to support them. Its goal is to help small businesses grow in the long run by building them a loyal clientele through the app.</p>
+                        <div class="report-links">
+                            <a href="#" class="report-link" target="_blank">View Report <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Report 3: HERS Breast Cancer Foundation RISE -->
+                <div class="list-item">
+                    <div class="list-item-header">
+                        <i class="fas fa-file-alt list-item-icon"></i>
+                        <h3>HERS Breast Cancer Foundation RISE</h3>
+                        <i class="fas fa-chevron-down accordion-icon"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <p>RISE is an integrated marketing campaign created for the HERS Breast Cancer Foundation's aiming to raise the turnout rate at their Annual Walkathon Fundraiser, increase event profits, and improve digital brand awareness.</p>
+                        <div class="report-links">
+                            <a href="#" class="report-link" target="_blank">View Report <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Report 4: National Auctioneer's Association Challenge -->
+                <div class="list-item">
+                    <div class="list-item-header">
+                        <i class="fas fa-file-alt list-item-icon"></i>
+                        <h3>National Auctioneer's Association Challenge</h3>
+                        <i class="fas fa-chevron-down accordion-icon"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <p>The challenge involves developing a marketing campaign for a full estate sale that will utilize the live auction method and include both real estate and personal property.</p>
+                        <div class="report-links">
+                            <a href="#" class="report-link" target="_blank">View Report <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Report 5: Veteran's Connect Fair SERVE -->
+                <div class="list-item">
+                    <div class="list-item-header">
+                        <i class="fas fa-file-alt list-item-icon"></i>
+                        <h3>Veteran's Connect Fair SERVE</h3>
+                        <i class="fas fa-chevron-down accordion-icon"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <p>SERVE is a marketing campaign for The Veterans' Connect Fair, a resource event for veterans and their families. The campaign involves six activities that use specific marketing tactics to allow the fair to reach the greatest awareness and create a long-lasting impact.</p>
+                        <div class="report-links">
+                            <a href="#" class="report-link" target="_blank">View Report <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Report 6: Alex's Lemonade Stand Foundation LEMONS -->
+                <div class="list-item">
+                    <div class="list-item-header">
+                        <i class="fas fa-file-alt list-item-icon"></i>
+                        <h3>Alex's Lemonade Stand Foundation LEMONS</h3>
+                        <i class="fas fa-chevron-down accordion-icon"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <p>LEMONS is a marketing campaign for global nonprofit Alex's Lemonade Stand Foundation, aiming to further their reach as they change the lives of children with cancer through funding impactful research, raising awareness, and supporting families. The campaign's activities and goals are all created in alignment with the foundation's goals.</p>
+                        <div class="report-links">
+                            <a href="#" class="report-link" target="_blank">View Report <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Timeline Section -->
+        <section id="experience" class="section">
+            <div class="section-header">
+                <h2>Experience & Roles</h2>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">Jun 2024 - Aug 2024</div>
+                    <div class="timeline-content">
+                        <h3>Computing Intern</h3>
+                        <p>Lawrence Berkeley National Laboratory</p>
+                        <p>Designed data pipelines and simulation workflows, utilized Python and ML frameworks to validate interaction models, and presented research outcomes to 200+ stakeholders.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">Jun 2024 - Aug 2024</div>
+                    <div class="timeline-content">
+                        <h3>Research Intern</h3>
+                        <p>Cornell University</p>
+                        <p>Leveraged Python in a Linux environment for large-scale data processing and statistical analysis of genomic datasets, achieving 95% accuracy.</p>
+                    </div>
+                </div>
+                 <div class="timeline-item">
+                    <div class="timeline-date">Jun 2023 - Aug 2023</div>
+                    <div class="timeline-content">
+                        <h3>Research Intern</h3>
+                        <p>Columbia University</p>
+                        <p>Created ML models in R to study flu vaccine uptake, achieving 70% accuracy and presenting results to professors and students.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">Oct 2022 - Oct 2022</div>
+                    <div class="timeline-content">
+                        <h3>Computing Researcher</h3>
+                        <p>Harvard Science Research Conference</p>
+                        <p>Applied Human-Computer Interaction principles to conceptualize and design a machine learning-driven personalized virtual reality speech-language therapy simulation for children with autism.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">Jun 2023 - Aug 2023</div>
+                    <div class="timeline-content">
+                        <h3>Machine Learning Researcher</h3>
+                        <p>UC Berkeley Academic Talent Development Program</p>
+                        <p>Employed statistics and ML models to analyze large datasets and evaluate correlations between photo volume and customer engagement.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section">
+            <div class="section-header">
+                <h2>Skills</h2>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-item">
+                    <h3>Languages</h3>
+                    <div class="skill-list">
+                        <span>Python</span>
+                        <span>Java</span>
+                        <span>SQL</span>
+                        <span>R</span>
+                        <span>MATLAB</span>
+                        <span>JavaScript</span>
+                        <span>Dart</span>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <h3>Tools & Frameworks</h3>
+                    <div class="skill-list">
+                        <span>Git</span>
+                        <span>Linux</span>
+                        <span>CI/CD</span>
+                        <span>NumPy</span>
+                        <span>Pandas</span>
+                        <span>Android Studio</span>
+                        <span>Arduino</span>
+                    </div>
+                </div>
+                 <div class="skill-item">
+                    <h3>Business Skills</h3>
+                    <div class="skill-list">
+                        <span>Strategic Planning</span>
+                        <span>Financial Modeling</span>
+                        <span>Project Management</span>
+                        <span>Communication</span>
+                    </div>
+                </div>
+            </div>
         </section>
 
     </main>
 
+    <!-- Footer -->
     <footer class="footer">
-        <div class="contact-info">
-            <p>Connect with me:</p>
-            <div class="social-links">
-                <a href="https://linkedin.com/in/your-profile" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
-                <a href="https://github.com/KeertiKoya" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-                <a href="mailto:your-email@example.com"><i class="fas fa-envelope"></i> Email</a>
-            </div>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/keerti-koya/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/keertikoya" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="mailto:koyakeerti@gmail.com"><i class="fas fa-envelope"></i></a>
         </div>
-        <p class="copyright">&copy; 2024 Keerti Koya. All rights reserved.</p>
+        <p class="copyright">&copy; 2025 Keerti Koya. All rights reserved.</p>
     </footer>
+
+    <script src="script.js"></script>
 
 </body>
 </html>
