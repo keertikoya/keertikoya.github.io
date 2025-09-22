@@ -1,22 +1,23 @@
 /* Colors & Variables */
 :root {
-    --primary-color: #fa8072; /* Salmon */
-    --secondary-color: #cccccc; /* Light gray for accents */
-    --background-dark: #333333; /* Dark gray */
-    --text-light: #f5f5f5; /* Off-white for general text */
-    --card-bg: #444444; /* Slightly lighter gray for cards */
+    --primary-color: #ffffff; /* white */
+    --secondary-color: #3491ad; /* blue to match hero gradient */
+    --background-dark: #ffffff; /* white */
+    --text-dark: #04043d; /* dark for general text */
+    --card-bg: #ffffff; /* white for cards */
     --border-color: #555555;
-    --accent-salmon: #ff9185; /* A lighter salmon for highlights */
+    --accent-blue: #3491ad; /* highlights */
 }
 
 /* Base Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Inter", sans-serif;
     background-color: var(--background-dark);
     color: var(--text-light);
     margin: 0;
     padding: 0;
     line-height: 1.6;
+    letter-spacing: 1px;
     scroll-behavior: smooth;
 }
 
@@ -31,7 +32,7 @@ body {
     position: relative;
     overflow: hidden;
     color: var(--text-light);
-    background: linear-gradient(135deg, #333333, #555555, #333333);
+    background: linear-gradient(135deg, #182269, #438190, #2e8470);
     background-size: 400% 400%;
     animation: gradient-animation 15s ease infinite;
 }
@@ -50,15 +51,15 @@ body {
     font-size: clamp(2.5rem, 8vw, 5rem);
     font-weight: bold;
     margin: 0 0 1rem;
-    letter-spacing: 2px;
+    letter-spacing: 20px;
     color: var(--primary-color);
 }
 
 .tagline {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: "Inter", sans-serif;
     font-size: clamp(0.9rem, 2vw, 1.5rem);
     font-style: italic;
-    color: var(--secondary-color);
+    color: var(--primary-color);
     min-height: 1.5rem; /* Prevents layout shift during typing */
 }
 
@@ -85,8 +86,8 @@ body {
 
 .btn-primary:hover {
     transform: scale(1.05);
-    background-color: var(--accent-salmon);
-    box-shadow: 0 0 15px var(--accent-salmon);
+    background-color: var(--accent-blue);
+    box-shadow: 0 0 15px var(--accent-blue);
 }
 
 .scroll-indicator {
@@ -120,10 +121,11 @@ main {
 }
 
 .section-header h2 {
+    font-family: "Inter", sans-serif;
     font-size: 2.5rem;
     position: relative;
     display: inline-block;
-    color: var(--primary-color);
+    color: var(--secondary-color);
 }
 
 .section-header h2::after {
@@ -132,8 +134,8 @@ main {
     left: 50%;
     bottom: -10px;
     width: 60%;
-    height: 3px;
-    background: var(--primary-color);
+    height: 5px;
+    background: var(--secondary-color);
     transform: translateX(-50%);
 }
 
@@ -157,16 +159,17 @@ main {
 
 .card:hover {
     transform: scale(1.03);
-    box-shadow: 0 0 25px var(--accent-salmon);
+    box-shadow: 0 0 25px var(--accent-blue);
 }
 
 .card-inner h3 {
     margin-top: 0;
-    color: var(--accent-salmon);
+    color: var(--accent-blue);
     font-size: 1.5rem;
 }
 
 .tech-badges {
+    color: var(--accent-blue);
     margin-top: 1rem;
     display: flex;
     gap: 0.75rem;
@@ -218,6 +221,9 @@ main {
     display: flex;
     gap: 1rem;
     flex-wrap: wrap;
+    background: linear-gradient(135deg, #182269, #438190, #2e8470);
+    background-size: 400% 400%;
+    animation: gradient-animation 15s ease infinite;
 }
 
 .card-buttons .btn {
@@ -246,7 +252,7 @@ main {
 }
 
 .list-item {
-    background-color: var(--card-bg);
+    background-color: var(--secondary-color);
     border: 1px solid var(--border-color);
     border-radius: 10px;
     text-decoration: none;
@@ -275,6 +281,7 @@ main {
 }
 
 .accordion-content {
+    color: var(--primary-color);
     padding: 0 1.5rem 1.5rem;
     display: none;
     overflow: hidden;
@@ -289,11 +296,12 @@ main {
 }
 
 .report-links {
+    color: var(--primary-color);
     margin-top: 1rem;
 }
 
 .report-link {
-    color: var(--accent-salmon);
+    color: var(--primary-color);
     text-decoration: none;
     font-weight: bold;
 }
@@ -320,12 +328,13 @@ main {
 .timeline-item.fade-in {
     opacity: 1;
     transform: translateY(0);
+    color: var(--secondary-color);
 }
 
 .timeline-date {
     width: 150px;
     font-weight: bold;
-    color: var(--primary-color);
+    color: var(--secondary-color);
     flex-shrink: 0;
     text-align: right;
     padding-right: 2rem;
@@ -333,7 +342,7 @@ main {
 
 .timeline-content {
     padding-left: 2rem;
-    border-left: 2px solid var(--border-color);
+    border-left: 2px solid var(--secondary-color);
     position: relative;
 }
 
@@ -344,7 +353,7 @@ main {
     top: 5px;
     width: 14px;
     height: 14px;
-    background-color: var(--primary-color);
+    background-color: var(--secondary-color);
     border-radius: 50%;
 }
 
@@ -374,7 +383,7 @@ main {
 }
 
 .skill-item {
-    background-color: var(--card-bg);
+    background-color: var(--secondary-color);
     border-radius: 10px;
     padding: 1.5rem;
     text-align: center;
@@ -432,5 +441,5 @@ main {
 
 .copyright {
     font-size: 0.8rem;
-    color: #888;
+    color: #ffffff;
 }
