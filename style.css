@@ -292,8 +292,7 @@ main {
 
 .accordion-content.is-open {
     display: block;
-    max-height: 300px; /* Adjust as needed */
-    padding: 1.5rem;
+    max-height: 200px;
 }
 
 .report-links {
