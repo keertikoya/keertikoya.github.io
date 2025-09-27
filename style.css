@@ -34,7 +34,7 @@ body {
     color: var(--text-light);
     background: linear-gradient(135deg, #182269, #438190, #2e8470);
     background-size: 400% 400%;
-    animation: gradient-animation 15s ease infinite;
+    animation: gradient-animation 7s ease infinite;
 }
 
 @keyframes gradient-animation {
@@ -221,9 +221,9 @@ main {
     display: flex;
     gap: 1rem;
     flex-wrap: wrap;
-    background: linear-gradient(135deg, #182269, #438190, #2e8470);
+    background: linear-gradient(135deg, #182269, #5c9fb0, #2e8470);
     background-size: 400% 400%;
-    animation: gradient-animation 15s ease infinite;
+    animation: gradient-animation 7s ease infinite;
     border-radius: 10px;
 }
 

@@ -5,7 +5,7 @@ function typeWriter() {
     if (i < tagline.length) {
         document.getElementById("typing-text").innerHTML += tagline.charAt(i);
         i++;
-        setTimeout(typeWriter, 50); // Typing speed
+        setTimeout(typeWriter, 40); // Typing speed
     }
 }
 window.onload = typeWriter;
