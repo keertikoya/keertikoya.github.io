@@ -13,15 +13,29 @@ window.onload = typeWriter;
 // Accordion for Reports
 document.querySelectorAll('.list-item-header').forEach(header => {
     header.addEventListener('click', () => {
-        const accordionContent = header.nextElementSibling;
-        const isOpen = accordionContent.classList.contains('is-open');
+        const listItem = header.closest('.list-item');
+        const accordionContent = listItem.querySelector('.accordion-content');
+        const accordionIcon = listItem.querySelector('.accordion-icon');
+        const isCurrentlyOpen = accordionContent.classList.contains('is-open');
 
-        document.querySelectorAll('.accordion-content').forEach(content => {
+        document.querySelectorAll('.list-item').forEach(item => {
+            const content = item.querySelector('.accordion-content');
+            const icon = item.querySelector('.accordion-icon');
+            
             content.classList.remove('is-open');
+            item.classList.remove('is-open');
+            if (icon) {
+                icon.classList.remove('is-rotated');
+            }
         });
 
-        if (!isOpen) {
+        // Toggle the clicked accordion
+        if (!isCurrentlyOpen) {
             accordionContent.classList.add('is-open');
+            listItem.classList.add('is-open');
+            if (accordionIcon) {
+                accordionIcon.classList.add('is-rotated');
+            }
         }
     });
 });

@@ -299,6 +299,10 @@ main {
     color: var(--primary-color);
 }
 
+.accordion-icon.is-rotated {
+    transform: rotate(180deg);
+}
+
 .report-links {
     color: var(--primary-color);
     margin-top: 1rem;
