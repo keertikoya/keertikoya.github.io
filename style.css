@@ -291,8 +291,71 @@ main {
 }
 
 .accordion-content.is-open {
-    display: block;
-    max-height: 200px;
+    display: flex;
+    gap: 2rem;
+    max-height: 400px;
+}
+
+.accordion-text {
+    flex: 1;
+    min-width: 60%;
+}
+
+.accordion-images {
+    position: relative;
+    width: 240px;
+    height: 180px;
+    flex-shrink: 0;
+}
+
+.report-image {
+    position: absolute;
+    width: 160px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-back {
+    top: 0;
+    right: 60px;
+    z-index: 1;
+}
+
+.image-front {
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+}
+
+.report-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(52, 145, 173, 0.5);
+    z-index: 3;
+}
+
+@media (max-width: 768px) {
+    .accordion-content.is-open {
+        flex-direction: column;
+        max-height: 600px;
+    }
+    
+    .accordion-text {
+        min-width: 100%;
+    }
+    
+    .accordion-images {
+        width: 100%;
+        height: 180px;
+        margin-top: 1rem;
+    }
+    
+    .report-image {
+        width: 160px;
+        height: 130px;
+    }
 }
 
 .accordion-icon {
