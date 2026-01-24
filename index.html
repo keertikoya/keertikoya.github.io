@@ -74,6 +74,161 @@ nav a{text-decoration:none;color:#111;text-transform:uppercase;font-size:0.8rem;
     margin-right: 6px;
 }
 
+/* --- EXPERIENCE TIMELINE --- */
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+/* The vertical line */
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    background: #e0e0e0; /* Light gray line */
+    top: 0;
+    bottom: 0;
+    left: 20px; /* Adjust placement */
+    margin-left: -1px;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 3rem;
+    padding-left: 60px; /* Space for the dot/line */
+}
+
+/* The dot on the timeline */
+.timeline-dot {
+    position: absolute;
+    left: 11px;
+    top: 5px;
+    width: 18px;
+    height: 18px;
+    background: white;
+    border: 3px solid #2f9dd5; /* Blue accent */
+    border-radius: 50%;
+    z-index: 2;
+    transition: background .3s;
+}
+
+.timeline-item:hover .timeline-dot {
+    background: #2f9dd5; /* Fill dot on hover */
+}
+
+.timeline-date {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.timeline-content {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid rgba(0,0,0,0.05);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+    transition: transform 0.3s ease;
+}
+
+.timeline-item:hover .timeline-content {
+    transform: translateX(5px);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.timeline-content h3 {
+    margin: 0;
+    color: #2f9dd5;
+    font-size: 1.3rem;
+}
+
+.timeline-content h4 {
+    margin: 0.2rem 0 1rem;
+    font-size: 1.1rem;
+    color: #333;
+    font-weight: 500;
+}
+
+.timeline-content ul {
+    padding-left: 1.2rem;
+    color: #555;
+    font-size: 0.95rem;
+}
+
+
+/* --- LEADERSHIP GRID --- */
+.leadership-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.leadership-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid rgba(0,0,0,0.05);
+    border-left: 5px solid #2f9dd5; /* Left accent border */
+    transition: transform 0.3s, box-shadow 0.3s;
+    height: 100%; /* Make cards equal height */
+}
+
+.leadership-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.leadership-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.leadership-icon {
+    font-size: 1.5rem;
+    color: #2f9dd5;
+    background: rgba(47, 157, 213, 0.1);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.leadership-info h3 {
+    font-size: 1.2rem;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.leadership-info span {
+    font-size: 0.9rem;
+    color: #777;
+    font-weight: 500;
+}
+
+.leadership-card ul {
+    margin-top: 1rem;
+    padding-left: 1.2rem;
+    color: #555;
+    font-size: 0.95rem;
+}
+
+/* Mobile fix for timeline */
+@media (max-width: 600px) {
+    .timeline::after { left: 10px; }
+    .timeline-item { padding-left: 35px; }
+    .timeline-dot { left: 2px; }
+}
+
 /* Sections */
 section{max-width:1200px;margin:auto;padding:7rem 2rem}
 
