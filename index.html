@@ -74,7 +74,7 @@ nav a{text-decoration:none;color:#111;text-transform:uppercase;font-size:0.8rem;
     margin-right: 6px;
 }
 
-/* --- EXPERIENCE TIMELINE --- */
+/* Experience Styling */
 .timeline {
     position: relative;
     max-width: 800px;
@@ -82,7 +82,6 @@ nav a{text-decoration:none;color:#111;text-transform:uppercase;font-size:0.8rem;
     padding: 2rem 0;
 }
 
-/* The vertical line */
 .timeline::after {
     content: '';
     position: absolute;
@@ -90,7 +89,7 @@ nav a{text-decoration:none;color:#111;text-transform:uppercase;font-size:0.8rem;
     background: #e0e0e0; /* Light gray line */
     top: 0;
     bottom: 0;
-    left: 20px; /* Adjust placement */
+    left: 20px;
     margin-left: -1px;
 }
 
@@ -100,7 +99,7 @@ nav a{text-decoration:none;color:#111;text-transform:uppercase;font-size:0.8rem;
     padding-left: 60px; /* Space for the dot/line */
 }
 
-/* The dot on the timeline */
+/* Timeline dot*/
 .timeline-dot {
     position: absolute;
     left: 11px;
@@ -108,14 +107,14 @@ nav a{text-decoration:none;color:#111;text-transform:uppercase;font-size:0.8rem;
     width: 18px;
     height: 18px;
     background: white;
-    border: 3px solid #2f9dd5; /* Blue accent */
+    border: 3px solid #23a77d;
     border-radius: 50%;
     z-index: 2;
     transition: background .3s;
 }
 
 .timeline-item:hover .timeline-dot {
-    background: #2f9dd5; /* Fill dot on hover */
+    background: #23a77d; /* Fill dot on hover */
 }
 
 .timeline-date {
@@ -144,7 +143,7 @@ nav a{text-decoration:none;color:#111;text-transform:uppercase;font-size:0.8rem;
 
 .timeline-content h3 {
     margin: 0;
-    color: #2f9dd5;
+    color: #23a77d;
     font-size: 1.3rem;
 }
 
@@ -162,7 +161,7 @@ nav a{text-decoration:none;color:#111;text-transform:uppercase;font-size:0.8rem;
 }
 
 
-/* --- LEADERSHIP GRID --- */
+/* Leadership Styling */
 .leadership-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -174,9 +173,9 @@ nav a{text-decoration:none;color:#111;text-transform:uppercase;font-size:0.8rem;
     padding: 2rem;
     border-radius: 12px;
     border: 1px solid rgba(0,0,0,0.05);
-    border-left: 5px solid #2f9dd5; /* Left accent border */
+    border-left: 5px solid #23a77d;
     transition: transform 0.3s, box-shadow 0.3s;
-    height: 100%; /* Make cards equal height */
+    height: 100%;
 }
 
 .leadership-card:hover {
@@ -192,14 +191,15 @@ nav a{text-decoration:none;color:#111;text-transform:uppercase;font-size:0.8rem;
 }
 
 .leadership-icon {
-    font-size: 1.5rem;
-    color: #2f9dd5;
-    background: rgba(47, 157, 213, 0.1);
-    width: 50px;
-    height: 50px;
+    flex-shrink: 0; 
+    width: 55px;
+    height: 55px;
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: 1.6rem;
+    color: #23a77d;
+    background: rgba(47, 213, 174, 0.1);
     border-radius: 50%;
 }
 
@@ -665,74 +665,188 @@ I’m passionate about building data-driven systems, engineering real-world prod
 
 <!-- EXPERIENCE -->
 <section id="experience">
-<h2>Experience</h2>
+    <div class="section-header">
+        <h2>Experience</h2>
+    </div>
 
-<div class="card">
-<b>Lawrence Berkeley National Laboratory — Computing Intern</b>
-<ul>
-<li>Designed data pipelines and simulation workflows for antibiotic binding analysis.</li>
-<li>Used Python + ML frameworks for validation.</li>
-<li>Presented findings to 200+ researchers.</li>
-</ul>
-</div>
+    <div class="timeline">
+        
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <span class="timeline-date">Summer 2024</span>
+            <div class="timeline-content">
+                <h3>Computing Intern</h3>
+                <h4>Lawrence Berkeley National Laboratory</h4>
+                <ul>
+                    <li>Designed data pipelines and simulation workflows for antibiotic binding analysis using high-performance computing clusters.</li>
+                    <li>Utilized Python and ML frameworks to validate simulation results against experimental data.</li>
+                    <li>Presented technical findings to a specialized audience of 200+ researchers and scientists.</li>
+                </ul>
+            </div>
+        </div>
 
-<div class="card">
-<b>Cornell University — Research Intern</b>
-<ul>
-<li>Large-scale genomic data processing in Linux.</li>
-<li>Achieved 95% accuracy models.</li>
-</ul>
-</div>
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <span class="timeline-date">Summer 2024</span>
+            <div class="timeline-content">
+                <h3>Research Intern</h3>
+                <h4>Cornell University</h4>
+                <ul>
+                    <li>Managed large-scale genomic data processing within a Linux environment to identify key genetic markers.</li>
+                    <li>Achieved 95% model accuracy by optimizing algorithms for biological data classification.</li>
+                </ul>
+            </div>
+        </div>
 
-<div class="card">
-<b>Columbia University — ML Research Intern</b>
-<ul>
-<li>Built R models for flu vaccine adoption prediction.</li>
-</ul>
-</div>
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <span class="timeline-date">Summer 2023</span>
+            <div class="timeline-content">
+                <h3>ML Research Intern</h3>
+                <h4>Columbia University</h4>
+                <ul>
+                    <li>Built statistical R models to predict flu vaccine adoption rates across different demographics.</li>
+                    <li>Analyzed large public health datasets to identify trends in vaccine hesitancy.</li>
+                </ul>
+            </div>
+        </div>
 
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <span class="timeline-date">Fall 2022</span>
+            <div class="timeline-content">
+                <h3>Computing Researcher</h3>
+                <h4>Harvard University</h4>
+                <ul>
+                    <li>Applied Human-Computer Interaction principles to conceptualize and design a machine learning-driven personalized virtual reality speech-language therapy simulation for children with autism.</li>
+                    <li>Participated in the Harvard Innovation Challenge.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <span class="timeline-date">Summer 2022</span>
+            <div class="timeline-content">
+                <h3>ML Researcher</h3>
+                <h4>UC Berkeley Academic Talent Development Program</h4>
+                <ul>
+                    <li>Employed statistics and ML models to analyze large datasets and evaluate correlations between photo volume and customer engagement.</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
 </section>
 
-<!-- LEADERSHIP -->
 <section id="leadership">
-<h2>Leadership</h2>
+    <div class="section-header">
+        <h2>Leadership</h2>
+    </div>
 
-<div class="card">
-<b>MSJ DECA — President, Director of Project Management</b>
-<ul>
-<li>Developed and led weekly workshops on business, marketing, and finance for 200+ members.</li>
-<li>Collaborated with school administration, teachers, and local companies to expand opportunities.</li>
-<li>Organized and managed 3 conferences, 2 guest speaker panels, and 6 community service events.</li>
-</ul>
-</div>
+    <div class="leadership-grid">
+        
+        <div class="leadership-card">
+            <div class="leadership-header">
+                <div class="leadership-icon">
+                    <i class="fas fa-bullhorn"></i>
+                </div>
+                <div class="leadership-info">
+                    <h3>DECA</h3>
+                    <span>President, Director of PM</span>
+                </div>
+            </div>
+            <ul>
+                <li>Developed and led weekly workshops on business, marketing, and finance for 200+ members.</li>
+                <li>Collaborated with school administration and local companies to expand student opportunities.</li>
+                <li>Organized 3 conferences, 2 speaker panels, and 6 community service events.</li>
+            </ul>
+        </div>
 
-<div class="card">
-<b>MSJ High Performance Computing Club — President, Secretary</b>
-<ul>
-<li>Increased membership by 60% through a new workshop series on quantum computing and HPC tools.</li>
-<li>Established and coordinated cross-club collaborations to promote advanced computing education.</li>
-</ul>
-</div>
+        <div class="leadership-card">
+            <div class="leadership-header">
+                <div class="leadership-icon">
+                    <i class="fas fa-server"></i>
+                </div>
+                <div class="leadership-info">
+                    <h3>High-Performance Computing</h3>
+                    <span>President, Secretary</span>
+                </div>
+            </div>
+            <ul>
+                <li>Increased membership by 60% through a new workshop series on quantum computing and HPC tools.</li>
+                <li>Established cross-club collaborations to promote advanced computing education.</li>
+            </ul>
+        </div>
 
-<div class="card">
-<b>MSJ WiSTEM — Vice President, Secretary, Board Member</b>
-<ul>
-<li>Delivered bi-weekly lectures to 30+ members on STEM topics.</li>
-<li>Developed a club-run research program introducing high-level academic research.</li>
-<li>Created outreach modules for elementary school STEM education.</li>
-</ul>
-</div>
+        <div class="leadership-card">
+            <div class="leadership-header">
+                <div class="leadership-icon">
+                    <i class="fas fa-dna"></i>
+                </div>
+                <div class="leadership-info">
+                    <h3>Women in STEM (WiSTEM)</h3>
+                    <span>Vice President, Board</span>
+                </div>
+            </div>
+            <ul>
+                <li>Delivered bi-weekly lectures to 30+ members on varying STEM topics.</li>
+                <li>Developed a club-run research program introducing high-level academic research.</li>
+                <li>Created outreach modules for elementary school STEM education.</li>
+            </ul>
+        </div>
 
-<div class="card">
-<b>The Smoke Signal — Opinion Editor, Tech Manager, Copyeditor, Staff Writer</b>
-<ul>
-<li>Edited and formatted monthly articles, editorials, and staff columns.</li>
-<li>Authored 36+ articles and managed publishing systems.</li>
-</ul>
-</div>
+        <div class="leadership-card">
+            <div class="leadership-header">
+                <div class="leadership-icon">
+                    <i class="fas fa-star"></i>
+                </div>
+                <div class="leadership-info">
+                    <h3>Shooting Stars Foundation</h3>
+                    <span>California Director</span>
+                </div>
+            </div>
+            <ul>
+                <li>Planned and executed 14 STEMxBusiness education programs for 300+ underserved students nationwide.</li>
+                <li>Created a camp template used to run over 40 camps nationwide.</li>
+            </ul>
+        </div>
 
+        <div class="leadership-card">
+            <div class="leadership-header">
+                <div class="leadership-icon">
+                    <i class="fas fa-newspaper"></i>
+                </div>
+                <div class="leadership-info">
+                    <h3>The Smoke Signal</h3>
+                    <span>Opinion Editor, Tech Manager</span>
+                </div>
+            </div>
+            <ul>
+                <li>Edited and formatted written and image pieces across 6 subsections, including monthly articles, editorials, and staff columns.</li>
+                <li>Authored 36+ articles and managed backend publishing systems.</li>
+            </ul>
+        </div>
+
+
+        <div class="leadership-card">
+            <div class="leadership-header">
+                <div class="leadership-icon">
+                    <i class="fas fa-feather-alt"></i>
+                </div>
+                <div class="leadership-info">
+                    <h3>Phoenix Arts & Literary Magazine</h3>
+                    <span>Business Manager, Art Editor</span>
+                </div>
+            </div>
+            <ul>
+                <li>Handled all expenditures and transactions related to magazine selling and fundraising.</li>
+                <li>Critiqued 70+ art submissions, sketched magazine layouts, and helped sell 50 magazines for the first time after the pandemic.</li>
+            </ul>
+        </div>
+
+    </div>
 </section>
-
 <!-- SKILLS -->
 <section id="skills">
 <h2>Skills</h2>
